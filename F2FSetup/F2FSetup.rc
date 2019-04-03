@@ -1,0 +1,602 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\F2FSetup.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\F2FSetup.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_F2FSETUP_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "F2FSetup"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,260,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,260,23,50,14
+    LTEXT           "TODO: ﾀﾞｲｱﾛｸﾞのｺﾝﾄﾛｰﾙをここに配置",IDC_STATIC,50,90,200,
+                    8
+END
+
+IDD_INSTALL DIALOG DISCARDABLE  0, 0, 243, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "F2Filter フィルタドライバのインストール"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,229,42
+    LTEXT           "フィルタドライバをインストールします。\r\nフィルタリング対象としたいゲームコントローラを選択した後に［OK］ボタンを押して下さい。",
+                    IDC_STATIC,13,17,216,29
+    LTEXT           "ゲームコントローラ一覧(&G)",IDC_STATIC,7,65,89,10
+    LISTBOX         IDC_JOYSTICK,7,76,229,106,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,57,194,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,147,194,50,14
+END
+
+IDD_TARGET_PAGE DIALOG DISCARDABLE  0, 0, 247, 210
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "対象アプリケーション"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "フォースフィードバックの効果を変更するアプリケーションの登録と、登録済みアプリケーションに関する設定をおこないます。",
+                    IDC_STATIC,7,9,233,21
+    LTEXT           "アプリケーション一覧（&L):",IDC_STATIC,7,42,86,11
+    CONTROL         "List1",IDC_TARGET_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,7,54,233,127
+    PUSHBUTTON      "追加(&A)...",IDC_ADD_TARGET,25,189,50,14,WS_GROUP
+    PUSHBUTTON      "削除(&D)",IDC_DROP_TARGET,98,189,50,14
+    PUSHBUTTON      "プロパティ(&P)...",IDC_TARGET_PROPERTY,171,189,50,14
+END
+
+IDD_GLOBAL_PAGE DIALOG DISCARDABLE  0, 0, 247, 210
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "全般"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ここでは全般的な項目についての設定をおこないます。\r\n\r\n現在のバージョンでは設定する項目はありません。",
+                    IDC_STATIC,7,16,233,82
+END
+
+IDD_TARGET_PROPERTY DIALOG DISCARDABLE  0, 0, 243, 283
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フィルタリングのプロパティ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "名前(&N):",IDC_STATIC,7,9,26,11
+    EDITTEXT        IDC_TARGET_NAME,38,7,198,14,ES_AUTOHSCROLL
+    LTEXT           "ファイル:",IDC_STATIC,7,26,26,11
+    EDITTEXT        IDC_TARGET_PATH,38,25,198,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "フィルタモード(&M)",IDC_STATIC,7,47,229,65
+    COMBOBOX        IDC_MODE,13,60,101,51,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "各モード毎の説明\r\nモード変更時にこのスタティックコントロールのウインドウテキストを変更する。",
+                    IDC_MODE_DESC,126,58,103,49
+    LTEXT           "",IDC_PAGE,7,120,229,138
+    DEFPUSHBUTTON   "OK",IDOK,51,262,50,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,143,262,50,14
+END
+
+IDD_F4PATCH_PAGE DIALOGEX 0, 0, 226, 166
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "バネの強さ(&F)",IDC_STATIC,0,0,226,56,WS_GROUP
+    CONTROL         "Slider1",IDC_GAIN,"msctls_trackbar32",WS_GROUP | 
+                    WS_TABSTOP,25,11,172,16
+    DEFPUSHBUTTON   "標準に戻す(&D)",IDC_DEFAULT_GAIN,169,38,52,14,WS_GROUP
+    RTEXT           "弱い",IDC_STATIC,8,13,17,11,SS_CENTERIMAGE
+    LTEXT           "強い",IDC_STATIC,199,15,16,11,SS_CENTERIMAGE
+    CTEXT           "100%",IDC_GAIN_DISPLAY,89,28,43,11
+    GROUPBOX        "ログファイル",IDC_STATIC,0,60,226,73
+    CONTROL         "ログを採取する(&L)",IDC_LOGGING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,71,87,10
+    LTEXT           "ファイル名(&L):",IDC_STATIC,6,88,44,11
+    EDITTEXT        IDC_LOG_PATH,52,86,168,14,ES_AUTOHSCROLL
+    CONTROL         "追加書きする(&A)",IDC_APPEND,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,103,105,65,13
+    CONTROL         "毎回ファイルの先頭から記録する(&C)",IDC_NEW,"Button",
+                    BS_AUTORADIOBUTTON,103,119,119,12
+END
+
+IDD_IGNORE_PAGE DIALOGEX 0, 0, 227, 118
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "バネの強さ",IDC_STATIC,0,0,226,74,WS_GROUP
+    CONTROL         "強さを調整する(&G)",IDC_SET_GAIN,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_GROUP | WS_TABSTOP,4,
+                    9,74,16
+    LTEXT           "強さ(&F):",IDC_STATIC_GAIN,7,31,36,11,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    CONTROL         "Slider1",IDC_GAIN,"msctls_trackbar32",WS_DISABLED | 
+                    WS_GROUP | WS_TABSTOP,27,44,172,16
+    RTEXT           "弱い",IDC_STATIC_GAIN_WEEK,10,46,17,11,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    LTEXT           "強い",IDC_STATIC_GAIN_STRONG,201,48,16,11,
+                    SS_CENTERIMAGE | WS_DISABLED
+    CTEXT           "",IDC_GAIN_DISPLAY,91,60,43,11
+END
+
+IDD_LOG_PAGE DIALOGEX 0, 0, 226, 75
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "ログファイル",IDC_STATIC,0,0,226,66
+    LTEXT           "ファイル名(&L):",IDC_STATIC,6,13,44,11
+    EDITTEXT        IDC_LOG_PATH,52,11,168,14,ES_AUTOHSCROLL
+    CONTROL         "追加書きする(&A)",IDC_APPEND,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,103,33,65,13
+    CONTROL         "毎回ファイルの先頭から記録する(&C)",IDC_NEW,"Button",
+                    BS_AUTORADIOBUTTON,103,48,119,12
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,1,4
+ PRODUCTVERSION 0,9,1,4
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "F2Filter Setup Utility\0"
+            VALUE "FileVersion", "0, 9, 1, 4\0"
+            VALUE "InternalName", "F2FSetup\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002-2003 Hiroshi Murayama\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "F2FSetup.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "F2FSetup\0"
+            VALUE "ProductVersion", "0.91d\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_F2FSETUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_INSTALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_TARGET_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_GLOBAL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_TARGET_PROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 276
+    END
+
+    IDD_IGNORE_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 226
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MSG_ALREADYINSTALLED 
+                            "フィルタドライバは既にインストールされています。"
+    IDS_INSTALL_TITLE       "F2Filter フィルタドライバのインストール"
+    IDS_UNINSTALL_TITLE     "F2Filter フィルタドライバのアンインストール"
+    IDS_SETUP_TITLE         "F2Filter セットアップ"
+    IDS_MSG_ACCESS_DENIED   "この操作を行う権限がありません。\r\nAdministrators グループに所属したシステム管理者権限のユーザー アカウントでログオンして操作をやり直してください。"
+    IDS_MSG_INSTALL_FINISH  "フィルタドライバのインストールが完了しました。"
+    IDS_MSG_NOTINSTALLED    "フィルタドライバはインストールされていません。"
+    IDS_MSG_UNINSTALL_FINISH 
+                            "フィルタドライバのアンインストールが完了しました。"
+    IDS_TL_NAME             "名前"
+    IDS_TL_PATH             "ファイル名"
+    IDS_TP_PAGE_F4Patch     "Falcon 4.0専用モード"
+    IDS_TP_PAGE_IGNORE      "無効化モード"
+    IDS_TP_PAGE_LOG         "ログ採取モード"
+    IDS_TP_DESC_F4Patch     "Falcon4.0のフォースフィードバック処理の不具合を修正します。\r\nFalcon4.0以外に対してこのモードを使用しないでください。"
+    IDS_TP_DESC_IGNORE      "フォースフィードバックを無効にします。\r\nこのモードを使用するとフォースフィードバックに対応しているゲームを未対応のゲームのように操作することができます。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TP_DESC_LOG         "ドライバ呼び出しのログを採取します。\r\nフォースフィードバック動作の変更はしません。\r\n不具合が発生した場合の調査用のモードです。"
+    IDS_OT_TITLE            "対象アプリケーションの選択"
+    IDS_OT_FILTER           "実行ファイル (*.exe)|*.exe|全てのファイル (*.*)|*.*||"
+    IDS_MSG_EXIT_TARGET     "このアプリケーションは既に登録されています。"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_F2FSETUP_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "F2FSetup"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,260,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,23,50,14
+    LTEXT           "TODO: ????????????????????",IDC_STATIC,50,90,200,8
+END
+
+IDD_F4PATCH_PAGE DIALOGEX 0, 0, 226, 166
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Spring &force",IDC_STATIC,0,0,226,56,WS_GROUP
+    CONTROL         "Slider1",IDC_GAIN,"msctls_trackbar32",WS_GROUP | 
+                    WS_TABSTOP,25,11,172,16
+    DEFPUSHBUTTON   "Reset &default",IDC_DEFAULT_GAIN,169,38,52,14,WS_GROUP
+    RTEXT           "Weak",IDC_STATIC,7,13,18,11,SS_CENTERIMAGE
+    LTEXT           "Strong",IDC_STATIC,197,12,21,11,SS_CENTERIMAGE
+    CTEXT           "100%",IDC_GAIN_DISPLAY,89,28,43,11
+    GROUPBOX        "Log file",IDC_STATIC,0,60,226,73
+    CONTROL         "Enable &logging",IDC_LOGGING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,71,87,10
+    LTEXT           "L&og file:",IDC_STATIC,6,88,44,11
+    EDITTEXT        IDC_LOG_PATH,52,86,168,14,ES_AUTOHSCROLL
+    CONTROL         "&Append",IDC_APPEND,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,103,105,65,13
+    CONTROL         "&Overwrite",IDC_NEW,"Button",BS_AUTORADIOBUTTON,103,119,
+                    119,12
+END
+
+IDD_GLOBAL_PAGE DIALOG DISCARDABLE  0, 0, 247, 210
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Global"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "This page is for global settings.\r\n\r\nThere is no item to set up in the present version.",
+                    IDC_STATIC,7,16,233,82
+END
+
+IDD_IGNORE_PAGE DIALOGEX 0, 0, 227, 118
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Spring force",IDC_STATIC,0,0,226,74,WS_GROUP
+    CONTROL         "Adjust &gain",IDC_SET_GAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,4,9,74,16
+    LTEXT           "G&ain:",IDC_STATIC_GAIN,7,31,36,11,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    CONTROL         "Slider1",IDC_GAIN,"msctls_trackbar32",WS_DISABLED | 
+                    WS_GROUP | WS_TABSTOP,27,44,172,16
+    RTEXT           "Weak",IDC_STATIC_GAIN_WEEK,8,46,19,11,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    LTEXT           "Strong",IDC_STATIC_GAIN_STRONG,200,46,20,11,
+                    SS_CENTERIMAGE | WS_DISABLED
+    CTEXT           "",IDC_GAIN_DISPLAY,91,60,43,11
+END
+
+IDD_INSTALL DIALOG DISCARDABLE  0, 0, 243, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "F2Filter: Install a filter driver"
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,229,42
+    LTEXT           "A Filter driver is going to be instaled.\r\nPlease select a game control device to filter, And then press [OK] button",
+                    IDC_STATIC,13,17,216,29
+    LTEXT           "&Game controlers",IDC_STATIC,7,65,89,10
+    LISTBOX         IDC_JOYSTICK,7,76,229,106,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,57,194,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,147,194,50,14
+END
+
+IDD_LOG_PAGE DIALOGEX 0, 0, 226, 75
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Log file",IDC_STATIC,0,0,226,66
+    LTEXT           "&File path:",IDC_STATIC,6,13,44,11
+    EDITTEXT        IDC_LOG_PATH,52,11,168,14,ES_AUTOHSCROLL
+    CONTROL         "&Append",IDC_APPEND,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,103,33,65,13
+    CONTROL         "&Overwrite",IDC_NEW,"Button",BS_AUTORADIOBUTTON,103,48,
+                    119,12
+END
+
+IDD_TARGET_PAGE DIALOG DISCARDABLE  0, 0, 247, 210
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Target applications"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Followings are applications to change force feedback effects.",
+                    IDC_STATIC,7,9,233,21
+    LTEXT           "App&lications",IDC_STATIC,7,42,86,11
+    CONTROL         "List1",IDC_TARGET_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,7,54,233,127
+    PUSHBUTTON      "&Add...",IDC_ADD_TARGET,25,189,50,14,WS_GROUP
+    PUSHBUTTON      "&Delete",IDC_DROP_TARGET,98,189,50,14
+    PUSHBUTTON      "&Property...",IDC_TARGET_PROPERTY,171,189,50,14
+END
+
+IDD_TARGET_PROPERTY DIALOG DISCARDABLE  0, 0, 243, 283
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filtering property"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "&Name:",IDC_STATIC,7,9,26,11
+    EDITTEXT        IDC_TARGET_NAME,38,7,198,14,ES_AUTOHSCROLL
+    LTEXT           "File:",IDC_STATIC,7,26,26,11
+    EDITTEXT        IDC_TARGET_PATH,38,25,198,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Filter &mode",IDC_STATIC,7,47,229,65
+    COMBOBOX        IDC_MODE,13,60,101,50,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "????????\r\n?????????????????????????????????????",
+                    IDC_MODE_DESC,126,58,103,49
+    LTEXT           "",IDC_PAGE,7,120,229,138
+    DEFPUSHBUTTON   "OK",IDOK,51,262,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,143,262,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_F2FSETUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_GLOBAL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_IGNORE_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 226
+    END
+
+    IDD_INSTALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_TARGET_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_TARGET_PROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 276
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MSG_ALREADYINSTALLED "A filter driver has alrady intalled."
+    IDS_INSTALL_TITLE       "F2Filter: Install a filter driver"
+    IDS_UNINSTALL_TITLE     "F2Filter: Uninstall a filter driver"
+    IDS_SETUP_TITLE         "F2Filter: Setup"
+    IDS_MSG_ACCESS_DENIED   "You don't have authority to do this action.\r\nPlease login as a user belong administrators group and try again."
+    IDS_MSG_INSTALL_FINISH  "It's finish to install a filter driver."
+    IDS_MSG_NOTINSTALLED    "A filter driver has not installed."
+    IDS_MSG_UNINSTALL_FINISH "It's finish to uninstall a filter driver."
+    IDS_TL_NAME             "Name"
+    IDS_TL_PATH             "Path"
+    IDS_TP_PAGE_F4Patch     "Falcon 4.0 bugfix mode"
+    IDS_TP_PAGE_IGNORE      "Ignore mode"
+    IDS_TP_PAGE_LOG         "Logging mode"
+    IDS_TP_DESC_F4Patch     "This mode is for only Falcon 4.0.\r\nThis improbe or correct the force feed back bug of Falcon 4.0."
+    IDS_TP_DESC_IGNORE      "This mode ignore force feedback effects. \r\nSo your game controler work similar to simply controler."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TP_DESC_LOG         "This mode put a log of colling a driver.\r\nThis is for debugging or reserch a application."
+    IDS_OT_TITLE            "select a target application"
+    IDS_OT_FILTER           "executive files (*.exe)|*.exe|all files (*.*)|*.*||"
+    IDS_MSG_EXIT_TARGET     "This application is already registered."
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\F2FSetup.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

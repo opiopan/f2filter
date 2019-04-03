@@ -1,0 +1,24 @@
+HKCR
+{
+	F2Filter.ForceFeedbackFilter.1 = s 'ForceFeedbackFilter Class'
+	{
+		CLSID = s '{2DB4C62E-11D0-11D6-B76B-0000E8D4B3D9}'
+	}
+	F2Filter.ForceFeedbackFilter = s 'ForceFeedback Filter Driver'
+	{
+		CLSID = s '{2DB4C62E-11D0-11D6-B76B-0000E8D4B3D9}'
+		CurVer = s 'F2Filter.ForceFeedbackFilter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2DB4C62E-11D0-11D6-B76B-0000E8D4B3D9} = s 'ForceFeedback Filter Driver'
+		{
+			ProgID = s 'F2Filter.ForceFeedbackFilter.1'
+			VersionIndependentProgID = s 'F2Filter.ForceFeedbackFilter'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+// filter.idl : filter.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (filter.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+//import "ocidl.idl";
+[
+	uuid(2DB4C621-11D0-11D6-B76B-0000E8D4B3D9),
+	version(1.0),
+	helpstring("F2Filter 1.0 Type Library")
+]
+library FILTERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(2DB4C62E-11D0-11D6-B76B-0000E8D4B3D9),
+		helpstring("ForceFeedback Filter Driver")
+	]
+	coclass ForceFeedbackFilter
+	{
+		[default] interface IUnknown;
+	};
+};
